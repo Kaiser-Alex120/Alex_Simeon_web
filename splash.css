@@ -1,0 +1,135 @@
+/* ============================================
+   SPLASH SCREEN - DATAPOLIS
+   ============================================ */
+
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a192f 0%, #000000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: fadeOut 0.5s ease-in-out 3.5s forwards;
+}
+
+#splash-screen .splash-content {
+  text-align: center;
+  animation: scaleIn 0.8s ease-out;
+}
+
+#splash-screen .splash-logo {
+  width: 150px;
+  height: 150px;
+  background: #FFD700;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 20px 60px rgba(255, 215, 0, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+#splash-screen .splash-logo-text {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0a192f;
+  font-family: 'Arial Black', sans-serif;
+}
+
+#splash-screen .splash-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+}
+
+#splash-screen .splash-subtitle {
+  font-size: 1.1rem;
+  color: #ccd6f6;
+  font-weight: 400;
+}
+
+#splash-screen .splash-loader {
+  width: 60px;
+  height: 4px;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 10px;
+  margin: 30px auto 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#splash-screen .splash-loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  border-radius: 10px;
+  animation: loading 3.5s ease-in-out forwards;
+}
+
+/* Animaciones */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 25px 80px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes loading {
+  to {
+    width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #splash-screen .splash-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  #splash-screen .splash-logo-text {
+    font-size: 2.5rem;
+  }
+
+  #splash-screen .splash-title {
+    font-size: 1.5rem;
+  }
+
+  #splash-screen .splash-subtitle {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+}

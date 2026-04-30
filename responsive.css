@@ -1,0 +1,294 @@
+/* ============================================
+   RESPONSIVE STYLES - DATAPOLIS
+   ============================================ */
+
+/* Reset y Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================
+   TABLET (600px - 900px)
+   ============================================ */
+@media (max-width: 900px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  /* Hero Section */
+  #inicio {
+    padding: 6rem 0 4rem !important;
+  }
+
+  #inicio h1 {
+    font-size: 2.5rem !important;
+  }
+
+  #inicio > div > div:first-child > div {
+    padding: 2rem !important;
+  }
+
+  #inicio > div > div:nth-child(2) {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Grids generales */
+  .projects-grid,
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+/* ============================================
+   MÓVIL (hasta 600px)
+   ============================================ */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 15px;
+    width: 100%;
+  }
+
+  /* Header */
+  header {
+    padding: 10px 0 !important;
+  }
+
+  header .container {
+    padding: 0 15px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-text {
+    font-size: 1rem !important;
+  }
+
+  header a[href*="youtube"] svg,
+  header a[href*="instagram"] svg,
+  header a[href*="linkedin"] svg,
+  header a[href*="tiktok"] svg,
+  header a[href*="whatsapp"] svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  header > div > div:last-child {
+    gap: 8px !important;
+    margin-left: 10px !important;
+  }
+
+  /* Hero Section */
+  #inicio {
+    padding: 5rem 0 3rem !important;
+  }
+
+  #inicio h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+    padding: 0 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #inicio > div {
+    padding: 0 !important;
+  }
+
+  #inicio > div > div:first-child {
+    margin-bottom: 2rem !important;
+  }
+
+  #inicio > div > div:first-child > div {
+    padding: 1.5rem !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    border-width: 1px !important;
+  }
+
+  #inicio > div > div:first-child p {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  #inicio > div > div:nth-child(2) {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #inicio > div > div:nth-child(2) > div {
+    margin: 0 !important;
+    border-width: 1px !important;
+  }
+
+  #inicio > div > div:nth-child(2) > div h3 {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  #inicio > div > div:nth-child(2) > div p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  #inicio > div > div:nth-child(2) > div > div:first-child {
+    height: 160px !important;
+  }
+
+  #inicio > div > div:nth-child(2) > div > div:last-child {
+    padding: 1.5rem !important;
+  }
+
+  #inicio > div > div:last-child {
+    padding: 1.75rem !important;
+    margin-top: 2rem !important;
+    max-width: 100% !important;
+    border-width: 1px !important;
+  }
+
+  #inicio > div > div:last-child h3 {
+    font-size: 1.35rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  #inicio > div > div:last-child p {
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+  }
+
+  /* Quiénes Somos */
+  #quienes {
+    padding: 3rem 0 !important;
+  }
+
+  #quienes .container > div {
+    padding: 0 !important;
+  }
+
+  #quienes h2 {
+    font-size: 1.85rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #quienes p {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+
+  #quienes > div > div > div {
+    padding: 1.5rem !important;
+  }
+
+  /* Proyectos y Eventos */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .project-card,
+  .investigation-card {
+    margin: 0 !important;
+  }
+
+  .project-card h3,
+  .investigation-card h3 {
+    font-size: 1.3rem !important;
+  }
+
+  .project-card p,
+  .investigation-card p {
+    font-size: 0.95rem !important;
+  }
+
+  /* Equipo */
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .team-card {
+    max-width: 100% !important;
+    padding: 1.5rem !important;
+  }
+
+  /* Secciones generales */
+  .section {
+    padding: 3rem 0 !important;
+  }
+
+  .section-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* ============================================
+   MÓVIL PEQUEÑO (hasta 400px)
+   ============================================ */
+@media (max-width: 400px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  #inicio h1 {
+    font-size: 1.5rem !important;
+  }
+
+  #inicio > div > div:first-child > div {
+    padding: 1.25rem !important;
+  }
+
+  #inicio > div > div:first-child p {
+    font-size: 0.9rem !important;
+  }
+
+  #inicio > div > div:nth-child(2) > div h3 {
+    font-size: 1.15rem !important;
+  }
+
+  #inicio > div > div:nth-child(2) > div p {
+    font-size: 0.9rem !important;
+  }
+
+  #inicio > div > div:last-child {
+    padding: 1.5rem !important;
+  }
+
+  #inicio > div > div:last-child h3 {
+    font-size: 1.2rem !important;
+  }
+
+  #inicio > div > div:last-child p {
+    font-size: 0.9rem !important;
+  }
+}
