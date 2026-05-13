@@ -8,27 +8,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Courier+Prime:wght@400;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <style>
     /* ─── TOKENS ─────────────────────────────────────── */
     :root {
-      --bg: #06080d;
-      --surface: #0d1117;
-      --surface2: #141922;
-      --border: rgba(255, 255, 255, 0.07);
-      --border-hi: rgba(92, 214, 170, 0.45);
-      --accent: #5cd6aa;
-      --accent2: #c084fc;
-      --warn: #f97316;
-      --text: #f0f4f8;
-      --muted: #6b7c93;
-      --muted2: #98a5b3;
-      --ff-head: 'Syne', sans-serif;
-      --ff-mono: 'DM Mono', monospace;
-      --ff-body: 'DM Sans', sans-serif;
+      --bg: #ffffff;
+      --surface: #f8f9fb;
+      --surface2: #f0f2f7;
+      --border: rgba(0, 0, 0, 0.08);
+      --border-hi: rgba(0, 100, 200, 0.3);
+      --accent: #0066cc;
+      --accent2: #6b5b95;
+      --warn: #ff6b35;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --muted2: #9ca3af;
+      --ff-head: 'EB Garamond', serif;
+      --ff-mono: 'Courier Prime', monospace;
+      --ff-body: 'EB Garamond', serif;
     }
 
     *,
@@ -61,7 +61,7 @@
         linear-gradient(var(--border) 1px, transparent 1px),
         linear-gradient(90deg, var(--border) 1px, transparent 1px);
       background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 15%, transparent 100%);
       pointer-events: none;
     }
 
@@ -80,7 +80,7 @@
       height: 55vw;
       top: -15%;
       left: -15%;
-      background: radial-gradient(circle, rgba(92, 214, 170, 0.12), transparent 65%);
+      background: radial-gradient(circle, rgba(0, 102, 204, 0.08), transparent 65%);
     }
 
     .blob-2 {
@@ -88,7 +88,7 @@
       height: 50vw;
       bottom: -10%;
       right: -10%;
-      background: radial-gradient(circle, rgba(192, 132, 252, 0.10), transparent 65%);
+      background: radial-gradient(circle, rgba(107, 91, 149, 0.06), transparent 65%);
       animation-delay: -9s;
     }
 
@@ -118,9 +118,10 @@
       left: 0;
       right: 0;
       z-index: 100;
-      background: rgba(6, 8, 13, 0.85);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     }
 
     nav {
@@ -200,7 +201,7 @@
       top: 68px;
       left: 0;
       right: 0;
-      background: rgba(6, 8, 13, 0.97);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
       padding: 2rem;
@@ -225,8 +226,8 @@
     .hero {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 5rem;
+      grid-template-columns: 350px 1fr;
+      gap: 4rem;
       align-items: center;
       padding-top: 68px;
     }
@@ -238,12 +239,13 @@
       font-family: var(--ff-mono);
       font-size: 0.78rem;
       color: var(--accent);
-      border: 1px solid rgba(92, 214, 170, 0.3);
+      border: 1px solid rgba(0, 102, 204, 0.2);
       border-radius: 100px;
       padding: 0.35rem 1rem;
       margin-bottom: 1.5rem;
       letter-spacing: 1px;
       text-transform: uppercase;
+      background: rgba(0, 102, 204, 0.05);
     }
 
     .hero-badge::before {
@@ -259,11 +261,11 @@
 
       0%,
       100% {
-        box-shadow: 0 0 0 0 rgba(92, 214, 170, 0.5);
+        box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.5);
       }
 
       50% {
-        box-shadow: 0 0 0 6px rgba(92, 214, 170, 0);
+        box-shadow: 0 0 0 6px rgba(0, 102, 204, 0);
       }
     }
 
@@ -341,25 +343,27 @@
 
     .btn-primary {
       background: var(--accent);
-      color: #050a0d;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 102, 204, 0.25);
     }
 
     .btn-primary:hover {
-      background: #7ee8c0;
+      background: #0052a3;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(92, 214, 170, 0.25);
+      box-shadow: 0 8px 24px rgba(0, 102, 204, 0.35);
     }
 
     .btn-ghost {
       border: 1px solid var(--border);
-      color: var(--muted2);
-      background: var(--surface2);
+      color: var(--text);
+      background: var(--surface);
     }
 
     .btn-ghost:hover {
       border-color: var(--accent);
       color: var(--accent);
       transform: translateY(-2px);
+      background: rgba(0, 102, 204, 0.05);
     }
 
     /* ─── PHOTO CARD ─────────────────────────────────── */
@@ -382,7 +386,7 @@
       position: absolute;
       inset: -14px;
       border-radius: 50%;
-      border: 2px dashed rgba(92, 214, 170, 0.3);
+      border: 2px dashed rgba(0, 102, 204, 0.25);
       animation: spin 20s linear infinite;
     }
 
@@ -398,7 +402,7 @@
       position: absolute;
       inset: -5px;
       border-radius: 50%;
-      border: 1px solid rgba(92, 214, 170, 0.15);
+      border: 1px solid rgba(0, 102, 204, 0.15);
     }
 
     .photo-inner {
@@ -406,9 +410,9 @@
       height: 100%;
       border-radius: 50%;
       overflow: hidden;
-      border: 1px solid rgba(92, 214, 170, 0.2);
+      border: 2px solid var(--accent);
       background: var(--surface2);
-      box-shadow: 0 0 60px rgba(92, 214, 170, 0.08), inset 0 0 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 60px rgba(0, 102, 204, 0.08), inset 0 0 40px rgba(0, 0, 0, 0.05);
     }
 
     .photo-inner img {
@@ -499,6 +503,7 @@
       border-radius: 16px;
       overflow: hidden;
       margin-top: 5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
     .stat-box {
@@ -515,7 +520,7 @@
     .stat-box .number {
       font-family: var(--ff-head);
       font-size: 2.5rem;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--accent);
       line-height: 1;
       margin-bottom: 0.4rem;
@@ -525,6 +530,7 @@
       font-size: 0.82rem;
       color: var(--muted);
       letter-spacing: 0.5px;
+      font-weight: 500;
     }
 
     /* ─── EXPERIENCE ─────────────────────────────────── */
@@ -542,13 +548,15 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 2rem 2.5rem;
-      transition: border-color 0.3s, transform 0.3s;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
       cursor: default;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
     }
 
     .exp-item:hover {
-      border-color: var(--border-hi);
+      border-color: var(--accent);
       transform: translateX(6px);
+      box-shadow: 0 8px 16px rgba(0, 102, 204, 0.1);
     }
 
     .exp-period {
@@ -557,6 +565,7 @@
       color: var(--muted);
       padding-top: 0.2rem;
       letter-spacing: 0.5px;
+      font-weight: 500;
     }
 
     .exp-period .dot {
@@ -566,7 +575,7 @@
       background: var(--accent);
       border-radius: 50%;
       margin-right: 0.5rem;
-      box-shadow: 0 0 8px var(--accent);
+      box-shadow: 0 0 8px rgba(0, 102, 204, 0.4);
     }
 
     .exp-body h3 {
@@ -574,19 +583,28 @@
       font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 0.2rem;
+      color: var(--text);
     }
 
     .exp-body .org {
       color: var(--accent);
       font-size: 0.88rem;
       margin-bottom: 0.8rem;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .exp-body p {
       color: var(--muted2);
       font-size: 0.92rem;
       line-height: 1.75;
+    }
+
+    .exp-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      object-fit: contain;
+      margin-top: 0.5rem;
     }
 
     /* ─── PROJECTS ───────────────────────────────────── */
@@ -606,6 +624,7 @@
       transition: all 0.35s ease;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
     }
 
     .pcard::before {
@@ -614,16 +633,16 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 2px;
+      height: 3px;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       opacity: 0;
       transition: opacity 0.35s;
     }
 
     .pcard:hover {
-      border-color: rgba(92, 214, 170, 0.2);
+      border-color: var(--border);
       transform: translateY(-8px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 32px rgba(0, 102, 204, 0.12);
     }
 
     .pcard:hover::before {
@@ -708,37 +727,45 @@
     .skill-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      padding: 1.5rem;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 0.8rem;
+      text-align: center;
       transition: all 0.3s;
       cursor: default;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
     }
 
     .skill-card:hover {
-      border-color: var(--border-hi);
-      transform: translateY(-3px);
-      background: var(--surface2);
-      box-shadow: 0 5px 15px rgba(92, 214, 170, 0.1);
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      background: rgba(0, 102, 204, 0.03);
+      box-shadow: 0 8px 16px rgba(0, 102, 204, 0.1);
     }
 
     .skill-icon {
-      font-size: 1.4rem;
+      font-size: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
     }
 
     .skill-name {
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.95rem;
+      font-weight: 600;
       color: var(--text);
     }
 
     .skill-level {
       font-family: var(--ff-mono);
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       color: var(--muted);
-      margin-top: 0.1rem;
+      margin-top: 0.2rem;
+      font-weight: 500;
     }
 
     /* ─── CONTACT ────────────────────────────────────── */
@@ -756,6 +783,7 @@
       margin: 0 auto;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 102, 204, 0.1);
     }
 
     .contact-box::after {
@@ -766,7 +794,7 @@
       transform: translateX(-50%);
       width: 300px;
       height: 120px;
-      background: radial-gradient(ellipse, rgba(92, 214, 170, 0.18), transparent 70%);
+      background: radial-gradient(ellipse, rgba(0, 102, 204, 0.08), transparent 70%);
       border-radius: 50%;
     }
 
@@ -775,6 +803,7 @@
       font-size: 2.5rem;
       font-weight: 800;
       margin-bottom: 1rem;
+      color: var(--text);
     }
 
     .contact-box p {
@@ -795,6 +824,7 @@
       padding: 2.5rem 0;
       position: relative;
       z-index: 1;
+      background: rgba(255, 255, 255, 0.5);
     }
 
     .footer-inner {
@@ -809,6 +839,7 @@
       font-family: var(--ff-mono);
       font-size: 0.78rem;
       color: var(--muted);
+      font-weight: 500;
     }
 
     .social-row {
@@ -819,8 +850,8 @@
     .soc-btn {
       width: 40px;
       height: 40px;
-      border-radius: 8px;
-      background: var(--surface2);
+      border-radius: 10px;
+      background: var(--surface);
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -832,21 +863,25 @@
     .soc-btn:hover {
       border-color: var(--accent);
       transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(92, 214, 170, 0.15);
+      box-shadow: 0 6px 16px rgba(0, 102, 204, 0.15);
+      background: rgba(0, 102, 204, 0.05);
     }
 
     .soc-btn img {
-      width: 18px;
-      height: 18px;
-      filter: invert(1) opacity(0.7);
-      transition: opacity 0.3s;
+      width: 20px;
+      height: 20px;
+      filter: brightness(0) saturate(100%);
+      transition: filter 0.3s;
     }
 
     .soc-btn:hover img {
-      opacity: 1;
+      filter: brightness(0) saturate(100%) hue-rotate(200deg);
     }
 
     .soc-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--text);
       transition: stroke 0.3s;
     }
 
@@ -953,6 +988,7 @@
           <li><a href="#projects">Proyectos</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contacto</a></li>
+          <li><a href="PDF/Piero_Alexander_Simeon_Bustilos_CV.pdf" target="_blank" style="color: var(--accent); font-weight: 700;">CV</a></li>
         </ul>
         <div class="hamburger" id="ham">
           <span></span><span></span><span></span>
@@ -974,58 +1010,84 @@
   <section id="about">
     <div class="container hero">
 
-      <!-- text -->
-      <div class="reveal">
-        <h1 class="hero-name" style="font-size: clamp(3rem, 4.5vw, 4.5rem); letter-spacing: -1px; line-height: 1.1;">
-          Piero Alexander<br>
-          <span class="accent" style="font-size: clamp(2rem, 3.5vw, 3.5rem); display: inline-block; margin-top: 0.5rem; background: linear-gradient(90deg, var(--accent), #7ee8c0); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Simeon Bustillos</span>
-        </h1>
-        <div class="hero-title" style="margin-top: 1.2rem; color: var(--text); font-weight: 600; font-size: 1.1rem;">Economista Cuantitativo · UNMSM</div>
-
-        <p class="hero-desc" style="margin-bottom: 1.5rem;">
-          Transformo datos complejos en insights accionables usando modelos matemáticos avanzados,
-          econometría bayesiana y programación científica.
-        </p>
-
-        <div class="hero-badge" style="margin-bottom: 1rem;">Te asesoro en:</div>
-        <div class="hero-services">
-          <span class="service-chip">Clases de repaso</span>
-          <span class="service-chip">Microeconomía</span>
-          <span class="service-chip">Macroeconomía</span>
-          <span class="service-chip">Econometría</span>
-          <span class="service-chip">Estadística</span>
-          <span class="service-chip">Matemáticas</span>
-          <span class="service-chip">Python</span>
-          <span class="service-chip">Investigación</span>
-          <span class="service-chip">Capacitación</span>
+      <!-- PERFIL LATERAL IZQUIERDO -->
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 2rem; align-items: flex-start;">
+        <!-- Foto -->
+        <div class="photo-wrap" style="width: 100%;">
+          <div class="photo-ring" style="width: 280px; height: 280px;">
+            <div class="photo-inner">
+              <img src="Imagens/EU.jpg" alt="Piero Alexander Simeon Bustillos"
+                onerror="this.style.display='none'; this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:4rem;\'>👤</div>'" />
+            </div>
+          </div>
         </div>
 
-        <div class="cta-row">
-          <a href="PDF/Piero_Alexander_Simeon_Bustilos_CV.pdf" target="_blank" class="btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.3rem;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Ver CV
+        <!-- Información de Perfil -->
+        <div style="width: 100%; padding: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px;">
+          <h2 style="font-family: var(--ff-head); font-size: 1.5rem; margin-bottom: 0.3rem; color: var(--text);">Piero Alexander Simeon Bustillos</h2>
+          <p style="color: var(--accent); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Economista Cuantitativo</p>
+          
+          <div style="border-top: 1px solid var(--border); padding-top: 1rem; margin-bottom: 1rem;">
+            <p style="color: var(--muted2); font-size: 0.9rem; margin-bottom: 0.8rem;"><strong>Experiencia Actual:</strong></p>
+            <p style="color: var(--text); font-weight: 600; margin-bottom: 0.3rem;">Investigación & Econometría</p>
+            <p style="color: var(--accent); font-size: 0.85rem; margin-bottom: 0.5rem;">UNMSM · IAE-CSIC</p>
+            <p style="color: var(--muted); font-size: 0.8rem;">Modelos Cuantitativos</p>
+          </div>
+
+          <div style="margin-bottom: 1rem;">
+            <p style="color: var(--muted2); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Especialidad:</strong></p>
+            <p style="color: var(--text); font-size: 0.95rem;">• Econometría Bayesiana<br>• Modelos VAR/SVAR<br>• Análisis Macroeconómico</p>
+          </div>
+        </div>
+
+        <!-- Enlaces Sociales -->
+        <div style="width: 100%; display: flex; flex-direction: column; gap: 0.8rem;">
+          <a href="https://www.kaggle.com/alexbustillos" target="_blank" class="btn btn-ghost" style="justify-content: center; width: 100%;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;"><path d="M20.47 2H3.53A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.53 22h16.94A1.5 1.5 0 0 0 22 20.5v-17A1.5 1.5 0 0 0 20.47 2zM9 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg> Kaggle
           </a>
-          <a href="mailto:alexisbu09@gmail.com" class="btn btn-ghost">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.3rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email
+          <a href="mailto:alexisbu09@gmail.com" class="btn btn-ghost" style="justify-content: center; width: 100%;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email
           </a>
-          <a href="https://www.linkedin.com/in/piero-alexander-simeon-bustillos-1b9a79294" target="_blank"
-            class="btn btn-ghost">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.3rem;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> LinkedIn
-          </a>
-          <a href="tel:+51968639675" class="btn btn-ghost">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.3rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 968 639 675
+          <a href="tel:+51968639675" class="btn btn-ghost" style="justify-content: center; width: 100%;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 968 639 675
           </a>
         </div>
       </div>
 
-      <!-- photo -->
-      <div class="photo-wrap reveal" style="transition-delay:0.15s">
-        <div class="photo-ring">
-          <div class="photo-inner">
-            <img src="Imagens/Yo.png" alt="Piero Alexander Simeon Bustillos"
-              onerror="this.style.display='none'; this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:4rem;\'>👤</div>'" />
-          </div>
+      <!-- CONTENIDO PRINCIPAL DERECHO -->
+      <div class="reveal" style="transition-delay:0.15s;">
+        <h1 class="hero-name" style="font-size: clamp(2.5rem, 4vw, 3.8rem); letter-spacing: -1px; line-height: 1.1;">
+          Piero Alexander<br>
+          <span class="accent" style="font-size: clamp(2rem, 3vw, 2.8rem); display: inline-block; margin-top: 0.5rem; background: linear-gradient(90deg, var(--accent), #0052a3); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Simeon Bustillos</span>
+        </h1>
+        <div class="hero-title" style="margin-top: 1.2rem; color: var(--text); font-weight: 600; font-size: 1.1rem;">Economista Cuantitativo · UNMSM · IAE-CSIC</div>
+
+        <p class="hero-desc" style="margin-bottom: 1.5rem;">
+          Transformo datos complejos en insights accionables usando modelos matemáticos avanzados, econometría bayesiana y programación científica. Especializado en VAR/SVAR y análisis macroeconómico.
+        </p>
+
+        <div class="hero-badge" style="margin-bottom: 1rem;">Lenguajes & Herramientas:</div>
+        <div class="hero-services">
+          <span class="service-chip">Python</span>
+          <span class="service-chip">MATLAB</span>
+          <span class="service-chip">R</span>
+          <span class="service-chip">Stata</span>
+          <span class="service-chip">EViews</span>
+          <span class="service-chip">VAR/SVAR</span>
+          <span class="service-chip">Scikit-learn</span>
+          <span class="service-chip">BVAR</span>
+          <span class="service-chip">Econometría</span>
         </div>
 
+        <div class="cta-row">
+          <a href="https://www.linkedin.com/in/piero-alexander-simeon-bustillos-1b9a79294" target="_blank"
+            class="btn btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.3rem;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> LinkedIn
+          </a>
+          <a href="https://github.com/Kaiser-Alex120" target="_blank" class="btn btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.3rem;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> GitHub
+          </a>
+        </div>
       </div>
 
     </div>
@@ -1039,7 +1101,7 @@
         </div>
         <div class="stat-box">
           <div class="number">3+</div>
-          <div class="label">Proyectos publicados en GitHub</div>
+          <div class="label">Proyectos en GitHub</div>
         </div>
         <div class="stat-box">
           <div class="number">10k+</div>
@@ -1047,7 +1109,7 @@
         </div>
         <div class="stat-box">
           <div class="number" style="font-size: 2rem;">ANÁLISIS</div>
-          <div class="label">Winter School 2025</div>
+          <div class="label">Winter School 2025 RIEF</div>
         </div>
       </div>
     </div>
@@ -1059,18 +1121,30 @@
       <div class="section-head reveal">
         <div class="sec-label">Trayectoria</div>
         <h2 class="sec-title">Experiencia</h2>
-        <p class="sec-desc">Investigación empírica y modelación cuantitativa en entornos académicos de alto nivel.</p>
+        <p class="sec-desc">Desarrollo, automatización y procesamiento de datos en entornos profesionales.</p>
       </div>
 
       <div class="exp-list">
 
         <div class="exp-item reveal">
           <div class="exp-period">
-            <div class="dot" style="display:inline-block"></div>2026 — Hoy
+            <div class="dot" style="display:inline-block"></div>Marzo 2026 — Hoy
           </div>
           <div class="exp-body">
+            <h3>Practicante Preprofesional</h3>
+            <div class="org">Macroconsul</div>
+            <img src="Imagens/macroconsult.png" alt="Macroconsul" class="exp-logo">
+            <p>Desarrollo de soluciones de web scrapping para extracción de datos en tiempo real. 
+              Diseño e implementación de flujos ETL automatizados para procesamiento y transformación de datos. 
+              Creación de pipelines de datos escalables y mantenimiento de sistemas de recolección continua.</p>
+          </div>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-period">2026 — Hoy</div>
+          <div class="exp-body">
             <h3>Asistente de Investigación</h3>
-            <div class="org">Renato Vassallo, PhD C</div>
+            <div class="org">Renato Vassallo, PhD</div>
             <p>Estimación de modelos BVAR con Pandemic Priors, MS-BVAR, Panel BVAR y BVAR con umbrales en MATLAB.
               Identificación de regímenes macroeconómicos y cálculo de funciones impulso–respuesta estructurales (IRFs).
             </p>
@@ -1084,16 +1158,6 @@
             <div class="org">Programa Internacional Avanzado</div>
             <p>Especialización en macroeconomía cuantitativa y finanzas: dinámica de mercados, gestión de activos,
               riesgo financiero y modelación estructural aplicada.</p>
-          </div>
-        </div>
-
-        <div class="exp-item reveal">
-          <div class="exp-period">2024</div>
-          <div class="exp-body">
-            <h3>Investigador · Tesis de Pregrado</h3>
-            <div class="org">Universidad Nacional Mayor de San Marcos</div>
-            <p>Procesamiento de microdatos ENAHO con Stata y construcción de panel de datos longitudinal.
-              Modelación econométrica de la viabilidad empresarial en el Perú.</p>
           </div>
         </div>
 
@@ -1116,16 +1180,15 @@
           <div class="pcard-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
           </div>
-          <h3>Varpy</h3>
+          <h3>VarPy</h3>
           <div class="tag-row">
             <span class="tag">Python</span>
             <span class="tag">VAR / SVAR</span>
-            <span class="tag">GARCH</span>
-            <span class="tag">Cointegración</span>
+            <span class="tag">Econometría</span>
+            <span class="tag">APIs</span>
           </div>
-          <p>Librería especializada para modelos VAR/SVAR, ARCH/GARCH, cointegración y causalidad de Granger.
-            Diseñada para proyección de PBI, inflación y spreads crediticios con API intuitiva.</p>
-          <a href="https://github.com/Kaiser-Alex120/VarPy" target="_blank" class="pcard-link">
+          <p><strong>Pipeline completo para modelos VAR/SVAR con restricciones de signo.</strong> Conexión directa a APIs del BCRP y Banco Mundial. Incluye: pruebas de estacionariedad (ADF, PP, KPSS), estimación VAR automática, identificación SVAR estructural, funciones impulso-respuesta, descomposición de varianza (FEVD), diagnósticos completos y pronósticos con bandas de confianza bootstrap. Totalmente modularizado y documentado.</p>
+          <a href="https://lnkd.in/eqJ7xNn2" target="_blank" class="pcard-link">
             Ver en GitHub <span class="arrow">↗</span>
           </a>
         </div>
@@ -1134,17 +1197,16 @@
           <div class="pcard-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
           </div>
-          <h3>Optimización de ETFs</h3>
+          <h3>Extractor Macroeconómico</h3>
           <div class="tag-row">
             <span class="tag">Python</span>
-            <span class="tag">Monte Carlo</span>
-            <span class="tag">VaR / CVaR</span>
-            <span class="tag">Power BI</span>
+            <span class="tag">Yahoo Finance</span>
+            <span class="tag">Banco Mundial</span>
+            <span class="tag">Demo</span>
           </div>
-          <p>Modelo multifactorial media–varianza con simulaciones Monte Carlo (10 000+). Calcula métricas de riesgo
-            VaR/CVaR y Sharpe Ratio. Visualización interactiva de pesos óptimos en Power BI.</p>
-          <a href="https://github.com/Kaiser-Alex120/Optimizaci-n-de-portafolio" target="_blank" class="pcard-link">
-            Ver en GitHub <span class="arrow">↗</span>
+          <p><strong>Herramienta de extracción y análisis de datos macroeconómicos y precios de activos.</strong> Integra datos del Banco Mundial y Yahoo Finance para análisis automático. Permite extraer series de tiempo, visualizaciones interactivas y cálculos de indicadores macroeconómicos sin problemas. Fase de Demo en desarrollo continuo.</p>
+          <a href="https://lnkd.in/eRHkb3dg" target="_blank" class="pcard-link">
+            Ver Proyecto <span class="arrow">↗</span>
           </a>
         </div>
 
@@ -1152,115 +1214,178 @@
           <div class="pcard-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
           </div>
-          <h3>BVAR con Umbrales</h3>
+          <h3>Análisis Macroeconómico BCRP</h3>
           <div class="tag-row">
             <span class="tag">MATLAB</span>
             <span class="tag">MS-BVAR</span>
             <span class="tag">Bayesiano</span>
-            <span class="tag">Mercado Laboral</span>
+            <span class="tag">BCRP</span>
           </div>
-          <p>Estimación de modelos bayesianos vectoriales con umbrales en MATLAB. Análisis de no linealidades
-            en el mercado laboral mediante ratio vacancy/unemployment e IRFs estructurales.</p>
-          <a href="#" class="pcard-link" style="color:var(--muted)">
-            En desarrollo <span class="arrow">↗</span>
+          <p>Estimación de modelos BVAR con Pandemic Priors y MS-BVAR en MATLAB. Análisis de dinámicas macroeconómicas: Tasa de Referencia BCRP, Expectativas Empresariales, Crecimiento del PBI y Términos de Intercambio. IRFs estructurales y análisis de regímenes macroeconómicos.</p>
+          <a href="https://lnkd.in/eB3XDgCv" target="_blank" class="pcard-link">
+            Ver Análisis <span class="arrow">↗</span>
           </a>
         </div>
 
       </div>
     </div>
   </section>
-
-  <!-- ── SKILLS ──────────────────────────────────────── -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="sec-label">Stack Técnico</div>
-        <h2 class="sec-title">Competencias Clave</h2>
-        <p class="sec-desc">Herramientas y metodologías que uso día a día en investigación y análisis.</p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card reveal">
-          <div class="skill-icon"><i class="devicon-python-plain colored" style="font-size: 36px;"></i></div>
-          <div>
-            <div class="skill-name">Python</div>
-            <div class="skill-level">Avanzado</div>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon"><i class="devicon-r-original colored" style="font-size: 36px;"></i></div>
-          <div>
-            <div class="skill-name">R</div>
-            <div class="skill-level">Avanzado</div>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon"><i class="devicon-matlab-plain colored" style="font-size: 36px;"></i></div>
-          <div>
-            <div class="skill-name">MATLAB</div>
-            <div class="skill-level">Avanzado</div>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
-          <div>
-            <div class="skill-name">Stata</div>
-            <div class="skill-level">Avanzado</div>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
-          <div>
-            <div class="skill-name">BVAR / MS-BVAR</div>
-            <div class="skill-level">Especialidad</div>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon"><i class="devicon-pandas-original colored" style="font-size: 36px;"></i></div>
-          <div>
-            <div class="skill-name">Pandas & NumPy</div>
-            <div class="skill-level">Avanzado</div>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
-          <div>
-            <div class="skill-name">Machine Learning</div>
-            <div class="skill-level">Intermedio</div>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><circle cx="15.5" cy="15.5" r="1.5"></circle><circle cx="15.5" cy="8.5" r="1.5"></circle><circle cx="8.5" cy="15.5" r="1.5"></circle></svg></div>
-          <div>
-            <div class="skill-name">Monte Carlo</div>
-            <div class="skill-level">Avanzado</div>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
-          <div>
-            <div class="skill-name">Econometría</div>
-            <div class="skill-level">Especialidad</div>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <div class="skill-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line><line x1="12" y1="8" x2="12" y2="16"></line></svg></div>
-          <div>
-            <div class="skill-name">Matemáticas</div>
-            <div class="skill-level">Especialidad</div>
-          </div>
-        </div>
-      </div>
+<!-- ── SKILLS ──────────────────────────────────────── -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="sec-label">Stack Técnico</div>
+      <h2 class="sec-title">Competencias Clave</h2>
+      <p class="sec-desc">Herramientas y metodologías que uso día a día en investigación y análisis.</p>
     </div>
-  </section>
+
+    <div class="skills-grid">
+
+      <!-- HTML5 – logo oficial devicon -->
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="devicon-html5-plain colored" style="font-size:2.5rem;"></i></div>
+        <div class="skill-name">HTML</div>
+        <div class="skill-level">Basico</div>
+      </div>
+
+      <!-- CSS3 – logo oficial devicon -->
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="devicon-css3-plain colored" style="font-size:2.5rem;"></i></div>
+        <div class="skill-name">CSS</div>
+        <div class="skill-level">Basico</div>
+      </div>
+
+      <!-- JavaScript – logo oficial devicon -->
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="devicon-javascript-plain colored" style="font-size:2.5rem;"></i></div>
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-level">Basico</div>
+      </div>
+
+      <!-- MATLAB – logo oficial devicon -->
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="devicon-matlab-plain colored" style="font-size:2.5rem;"></i></div>
+        <div class="skill-name">MATLAB</div>
+        <div class="skill-level">Avanzado</div>
+      </div>
+
+      <!-- Stata – SVG fiel al logo real (S estilizada con colores corporativos) -->
+      <div class="skill-card reveal">
+        <div class="skill-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="6" fill="#1A5276"/>
+            <rect x="10" y="10" width="28" height="5" rx="1" fill="#FFFFFF"/>
+            <rect x="10" y="19" width="28" height="5" rx="1" fill="#FFFFFF"/>
+            <rect x="10" y="28" width="28" height="5" rx="1" fill="#FFFFFF"/>
+            <rect x="10" y="37" width="28" height="5" rx="1" fill="#FFFFFF" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="skill-name">Stata</div>
+        <div class="skill-level">Avanzado</div>
+      </div>
+
+      <!-- EViews – SVG fiel al logo real (letras EV con color corporativo) -->
+      <div class="skill-card reveal">
+        <div class="skill-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="6" fill="#003366"/>
+            <text x="24" y="20" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="13" fill="#4DA6FF">EViews</text>
+            <polyline points="8,38 16,26 22,32 28,20 36,28 40,22" stroke="#4DA6FF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="skill-name">EViews</div>
+        <div class="skill-level">Avanzado</div>
+      </div>
+
+      <!-- Python -->
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="devicon-python-plain colored" style="font-size:2.5rem;"></i></div>
+        <div class="skill-name">Python</div>
+        <div class="skill-level">Avanzado</div>
+      </div>
+
+      <!-- R -->
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="devicon-r-original colored" style="font-size:2.5rem;"></i></div>
+        <div class="skill-name">R</div>
+        <div class="skill-level">Intermedio</div>
+      </div>
+
+      <!-- Scikit-learn -->
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="devicon-scikitlearn-plain colored" style="font-size:2.5rem;"></i></div>
+        <div class="skill-name">Scikit-learn</div>
+        <div class="skill-level">Intermedio</div>
+      </div>
+
+      <!-- Pandas & NumPy -->
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="devicon-pandas-original colored" style="font-size:2.5rem;"></i></div>
+        <div class="skill-name">Pandas & NumPy</div>
+        <div class="skill-level">Avanzado</div>
+      </div>
+
+      <!-- VAR / SVAR -->
+      <div class="skill-card reveal">
+        <div class="skill-icon">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+        </div>
+        <div class="skill-name">VAR / SVAR</div>
+        <div class="skill-level">Especialidad</div>
+      </div>
+
+      <!-- Monte Carlo -->
+      <div class="skill-card reveal">
+        <div class="skill-icon">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <circle cx="15.5" cy="15.5" r="1.5"></circle>
+            <circle cx="15.5" cy="8.5" r="1.5"></circle>
+            <circle cx="8.5" cy="15.5" r="1.5"></circle>
+          </svg>
+        </div>
+        <div class="skill-name">Monte Carlo</div>
+        <div class="skill-level">Avanzado</div>
+      </div>
+
+      <!-- Econometría -->
+      <div class="skill-card reveal">
+        <div class="skill-icon">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+        </div>
+        <div class="skill-name">Econometría</div>
+        <div class="skill-level">Especialidad</div>
+      </div>
+
+      <!-- Matemáticas -->
+      <div class="skill-card reveal">
+        <div class="skill-icon">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+            <line x1="12" y1="8" x2="12" y2="16"></line>
+          </svg>
+        </div>
+        <div class="skill-name">Matemáticas</div>
+        <div class="skill-level">Especialidad</div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- ── CONTACT ─────────────────────────────────────── -->
   <section id="contact">
     <div class="container">
       <div class="contact-box reveal">
         <div class="sec-label" style="display:inline-block;margin-bottom:1rem">Contacto</div>
-        <h2>¿Trabajamos juntos?</h2>
-        <p>Disponible para asesorías en investigación, capacitación y proyectos cuantitativos.</p>
+        <h2>¿Colaboremos en investigación cuantitativa?</h2>
+        <p>Disponible para proyectos de modelación econométrica, análisis macroeconómico y asuntos de investigación académica.</p>
         <div class="contact-btn-row">
           <a href="mailto:alexisbu09@gmail.com" class="btn btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.3rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> alexisbu09@gmail.com
@@ -1281,7 +1406,7 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <p class="footer-copy">© 2026 Piero Alexander Simeon Bustillos · Diseñado con visión cuantitativa</p>
+        <p class="footer-copy">© 2026 Piero Alexander Simeon Bustillos · Economista Cuantitativo | UNMSM</p>
         <div class="social-row">
           <a href="https://www.linkedin.com/in/piero-alexander-simeon-bustillos-1b9a79294" target="_blank"
             class="soc-btn">
@@ -1332,3 +1457,4 @@
 </body>
 
 </html>
+
