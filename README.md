@@ -1,5 +1,7 @@
 # 🌐 Portafolio Web – Alex Simeón
 
+Hola Bienvenido a mi la creación de mi portafolio web, este proyecto lo elabore con mis conocimientos de visual code y Claude code.
+Los fines son para que me conozcan y vean que impreciones pueden obtener de mí
 Bienvenido a mi espacio digital, donde combino economía, análisis de datos y tecnología para construir soluciones prácticas y visuales.
 
 ## 🚀 Sobre el proyecto
@@ -26,7 +28,6 @@ Este sitio web presenta una colección de herramientas y proyectos enfocados en 
 ## 🎯 Enfoque
 
 Mi trabajo se centra en:
-
 - Data-driven decision making  
 - Automatización de procesos de análisis  
 - Visualización clara y profesional  
